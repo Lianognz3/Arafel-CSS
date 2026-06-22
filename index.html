@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Arafel CSS - Micro Framework</title>
+   <link rel="stylesheet" href="dist/arafel.min.css" />
+   <style>
+      /* Estilos específicos de la documentación y estética Glassmorphism */
+      body {
+         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+         background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+         /* Fondo animado y atractivo */
+         background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+         background-size: 400% 400%;
+         animation: gradientBG 15s ease infinite;
+         margin: 0;
+         padding: 0;
+         color: #333;
+         min-height: 100vh;
+      }
+
+      @keyframes gradientBG {
+         0% { background-position: 0% 50%; }
+         50% { background-position: 100% 50%; }
+         100% { background-position: 0% 50%; }
+      }
+
+      .container {
+         max-width: 900px;
+         margin: 0 auto;
+         padding: 2rem;
+         position: relative;
+         z-index: 10;
+      }
+
+      .card {
+         /* Glassmorphism */
+         background: rgba(255, 255, 255, 0.6);
+         backdrop-filter: blur(16px);
+         -webkit-backdrop-filter: blur(16px);
+         border: 1px solid rgba(255, 255, 255, 0.4);
+         border-radius: 12px;
+         padding: 2rem;
+         margin-bottom: 2rem;
+         box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+         color: #222;
+      }
+
+      code {
+         background-color: rgba(0, 0, 0, 0.05);
+         padding: 4px 8px;
+         border-radius: 4px;
+         font-family: monospace;
+         font-size: 0.9em;
+         color: #d81b60;
+      }
+
+      pre {
+         background-color: rgba(30, 30, 30, 0.85);
+         color: #f8f8f2;
+         padding: 1.2rem;
+         border-radius: 8px;
+         overflow-x: auto;
+         border: 1px solid rgba(255,255,255,0.1);
+         box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+      }
+
+      h2 {
+         margin-top: 0;
+         border-bottom: 2px solid rgba(0,0,0,0.05);
+         padding-bottom: 0.5rem;
+         color: #111;
+      }
+
+      .demo-box {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 1rem;
+         margin-top: 1rem;
+      }
+
+      .logo {
+         text-align: center;
+         margin-bottom: 2rem;
+         color: white;
+         text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      }
+      
+      .logo h1 {
+         font-size: 4rem;
+         margin-bottom: 0.5rem;
+      }
+      
+      .logo p {
+         font-size: 1.2rem;
+         opacity: 0.9;
+      }
+
+      .glass-demo {
+         background: rgba(255, 255, 255, 0.2);
+         border-radius: 8px;
+         padding: 2rem;
+         border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+   </style>
+</head>
+
+<body>
+
+   <header class="header">
+      <h1 class="texto-blanco negritas" style="margin:0; font-size: 1.5rem; color: #333; text-shadow: none;">Arafel CSS</h1>
+   </header>
+   <div class="espacio"></div>
+
+   <div class="container">
+      <div class="logo">
+         <h1 class="negritas">Arafel CSS</h1>
+         <p>Un micro-framework ligero, elegante y moderno para tus proyectos web.</p>
+         <br>
+         <a href="arafel-css.zip" class="button marino-con-fondo" style="font-size: 1.2rem; padding: 18px 40px; border-radius: 30px;" download>Descargar Arafel CSS</a>
+      </div>
+
+      <div class="card">
+         <h2>Instalación</h2>
+         <p>Descarga el archivo <code>.zip</code>, extráelo y enlaza el archivo <code>arafel.min.css</code> en tu
+            archivo HTML:</p>
+         <pre>&lt;link rel="stylesheet" href="dist/arafel.min.css" /&gt;</pre>
+      </div>
+
+      <div class="card">
+         <h2>Botones</h2>
+         <p>Agrega la clase <code>.button</code> y una clase de color para obtener botones modernos con efectos de
+            elevación y transiciones suaves.</p>
+
+         <h3>Botones con fondo (Sólidos)</h3>
+         <div class="demo-box">
+            <button class="button rojo-con-fondo">Rojo</button>
+            <button class="button verde-con-fondo">Verde</button>
+            <button class="button azul-con-fondo">Azul</button>
+            <button class="button amarillo-con-fondo">Amarillo</button>
+            <button class="button naranja-con-fondo">Naranja</button>
+            <button class="button marino-con-fondo">Marino</button>
+            <button class="button gris-con-fondo">Gris</button>
+            <button class="button negro-con-fondo">Negro</button>
+         </div>
+         <pre>&lt;button class="button azul-con-fondo"&gt;Azul&lt;/button&gt;</pre>
+
+         <h3>Botones sin fondo (Huecos)</h3>
+         <div class="demo-box">
+            <button class="button rojo-sin-fondo">Rojo</button>
+            <button class="button verde-sin-fondo">Verde</button>
+            <button class="button azul-sin-fondo">Azul</button>
+            <button class="button amarillo-sin-fondo">Amarillo</button>
+            <button class="button naranja-sin-fondo">Naranja</button>
+            <button class="button marino-sin-fondo">Marino</button>
+            <button class="button gris-sin-fondo">Gris</button>
+            <button class="button negro-sin-fondo">Negro</button>
+         </div>
+         <pre>&lt;button class="button rojo-sin-fondo"&gt;Rojo&lt;/button&gt;</pre>
+      </div>
+
+      <div class="card">
+         <h2>Campos de Texto (Inputs)</h2>
+         <p>Usa la clase <code>.input</code> para aplicar estilos modernos a tus formularios. Incluyen un elegante efecto de enfoque (focus).</p>
+         <div class="demo-box glass-demo">
+            <input type="text" class="input" placeholder="Tu nombre...">
+            <input type="email" class="input" placeholder="Tu correo...">
+         </div>
+         <pre>&lt;input type="text" class="input" placeholder="Tu nombre..."&gt;</pre>
+      </div>
+
+      <div class="card">
+         <h2>Loaders / Indicadores de Carga</h2>
+         <p>El framework incluye múltiples indicadores de carga construidos puramente en CSS, ahora con nombres en español.</p>
+         <div class="demo-box glass-demo" style="align-items: center; justify-content: space-around;">
+            <div class="lds-anillo-doble" title="Anillo Doble"></div>
+            <div class="lds-corazon" title="Corazón"><div></div></div>
+            <div class="lds-onda" title="Onda"><div></div><div></div></div>
+            <div class="lds-puntos" title="Puntos"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            <div class="lds-girador" title="Girador"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+         </div>
+         <pre>&lt;!-- Anillo doble --&gt;
+&lt;div class="lds-anillo-doble"&gt;&lt;/div&gt;
+
+&lt;!-- Corazón --&gt;
+&lt;div class="lds-corazon"&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;!-- Onda (Ripple) --&gt;
+&lt;div class="lds-onda"&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+      </div>
+
+      <div class="card">
+         <h2>Sistema de Cuadrícula (Grid Responsivo)</h2>
+         <p>Usa <code>.ancho-*</code> para definir el porcentaje de ancho (desde 1 hasta 100).</p>
+         <p>Además, Arafel soporta diseño responsivo con modificadores: <code>.ancho-sm-*</code> (pantallas > 576px), <code>.ancho-md-*</code> (> 768px) y <code>.ancho-lg-*</code> (> 992px).</p>
+         
+         <div style="background: rgba(0,0,0,0.05); border-radius: 8px; padding: 10px; margin-bottom: 10px;">
+            <div class="ancho-100 ancho-md-50 azul-con-fondo"
+               style="color:white; text-align:center; padding:15px; border-radius:6px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: width 0.3s;">
+               .ancho-100 .ancho-md-50
+            </div>
+         </div>
+         <div style="background: rgba(0,0,0,0.05); border-radius: 8px; padding: 10px;">
+            <div class="ancho-100 ancho-md-80 verde-con-fondo"
+               style="color:white; text-align:center; padding:15px; border-radius:6px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: width 0.3s;">
+               .ancho-100 .ancho-md-80
+            </div>
+         </div>
+         <br>
+         <pre>&lt;!-- En móviles ocupa el 100%, pero en pantallas medianas (md) ocupa el 50% --&gt;
+&lt;div class="ancho-100 ancho-md-50 azul-con-fondo"&gt;Responsivo&lt;/div&gt;</pre>
+      </div>
+
+   </div>
+</body>
+
+</html>
